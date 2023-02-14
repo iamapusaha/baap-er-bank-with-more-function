@@ -17,4 +17,16 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
 
     // set the value on amount on the witdraw section
     withdrawTotalElement.innerText = currentWithdrawTotal;
+
+
+    //get the balance total value
+    const balanceTotalElement = document.getElementById('balance-total')
+    const preBalanceTotalString = balanceTotalElement.innerText;
+    const PreBalanceTotal = parseFloat(preBalanceTotalString)
+
+    // now calculate the total value on the balance total
+    const currentBalanceTotal = preBalanceTotalString - newWithdrawAmount;
+
+    //now set the value on the balance section
+    balanceTotalElement.innerText = currentBalanceTotal;
 })
